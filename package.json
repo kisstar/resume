@@ -165,6 +165,8 @@
     "eslint-plugin-react": "7.18.0",
     "eslint-plugin-react-hooks": "^1.6.1",
     "husky": "^4.2.3",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
     "lint-staged": "^10.0.8",
     "markdownlint": "^0.19.0",
     "markdownlint-cli": "^0.22.0",
