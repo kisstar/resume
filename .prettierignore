@@ -10,6 +10,7 @@ package.json
 **/*.svg
 *.png
 /dist
+/build
 /lib/yarn/releases
 .DS_Store
 yarn-error.log

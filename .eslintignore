@@ -1,2 +1,10 @@
+# compiled output
 /dist
+/build
+
+# yarn scripts
 /lib/yarn/releases
+
+# for create-react-app  configuration file
+/config
+/scripts
