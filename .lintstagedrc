@@ -1,4 +1,5 @@
 {
+  "*.less": ["stylelint --syntax less"],
   "*.js": ["yarn run lint:es"],
   "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
   "*.md": ["yarn run lint:md"],
