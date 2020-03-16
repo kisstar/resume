@@ -41,6 +41,8 @@ const imageInlineSizeLimit = parseInt(process.env.IMAGE_INLINE_SIZE_LIMIT || '10
 // Check if TypeScript is setup
 const useTypeScript = fs.existsSync(paths.appTsConfig);
 
+const htmlRegex = /\.(html)$/;
+
 // style files regexes
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
@@ -311,6 +313,25 @@ module.exports = function(webpackEnv) {
       rules: [
         // Disable require.ensure as it's not a standard language feature.
         { parser: { requireEnsure: false } },
+
+        // lint your html
+        {
+          enforce: 'pre',
+          test: htmlRegex,
+          loader: 'htmlhint-loader',
+          exclude: /node_modules/,
+        },
+
+        // exports HTML as string
+        {
+          test: htmlRegex,
+          use: {
+            loader: 'html-loader',
+            options: {
+              attrs: [':data-src'],
+            },
+          },
+        },
 
         // First, run the linter.
         // It's important to do this before Babel processes the JS.
