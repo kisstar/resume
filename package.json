@@ -9,7 +9,7 @@
     "test": "node scripts/test.js",
     "commit": "git-cz",
     "lint:md": "markdownlint **/*.md",
-    "lint:style": "stylelint --fix \"./src/**/*.less\" --syntax less",
+    "lint:style": "stylelint \"./src/**/*.less\" --syntax less",
     "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx",
     "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
     "lint:es": "eslint --cache --ext .js .",
@@ -179,7 +179,8 @@
     "stylelint-config-rational-order": "^0.1.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
-    "stylelint-order": "^4.0.0"
+    "stylelint-order": "^4.0.0",
+    "stylelint-webpack-plugin": "^1.2.3"
   },
   "license": "MIT"
 }
